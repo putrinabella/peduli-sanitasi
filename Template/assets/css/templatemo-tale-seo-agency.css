@@ -167,7 +167,6 @@ ul {
 p {
   font-size: 15px;
   line-height: 30px;
-  /* color: #afafaf; */
   color: #2a2a2a;
 }
 
@@ -274,12 +273,112 @@ body {
 }
 
 .section-heading h2 em {
-  color: #5b03e4;
+  color: #198754;
   font-style: normal;
 }
 
 .section-heading h2 span {
-  color: #c03afe;
+  color: #198754;
+}
+
+/* 
+---------------------------------------------
+Pre-loader Style
+--------------------------------------------- 
+*/
+
+.js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.99);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: transparent;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #5b03e4;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #5b03e4;
+  border-radius: 50%;
 }
 
 /* 
@@ -305,14 +404,8 @@ Header Style
 .header-area {
   position: absolute;
   background: rgb(85, 0, 227);
-  background: linear-gradient(
-    90deg,
-    rgba(85, 0, 227, 1) 0%,
-    rgba(198, 61, 255, 1) 100%
-  );
+  background: linear-gradient(90deg, rgb(0 227 7) 0%, rgb(82 61 255) 100%);
   height: 110px;
-  /* here */
-  top: 0px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -799,15 +892,15 @@ Banner Style
 
 .main-banner {
   position: relative;
-  padding: 295px 0px 20px 0px;
+  padding: 295px 0px 185px 0px;
 }
 
 .main-banner:after {
-  content: url(../images/banner-right.png);
-  top: -1px;
+  content: url(../images/sanitasi4.jpg);
+  top: 150px;
   right: 0;
   position: absolute;
-  width: 861px;
+  width: 575px;
   height: 746px;
   z-index: -1;
 }
@@ -824,7 +917,7 @@ Banner Style
 
 .main-banner h6 {
   font-size: 20px;
-  color: #5b03e4;
+  color: #198754;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -846,11 +939,11 @@ Banner Style
 
 .main-banner h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: #198754;
 }
 
 .main-banner h4 span {
-  color: #c03afe;
+  color: rgb(82 61 255);
 }
 
 .main-banner p {
@@ -888,7 +981,7 @@ Services Style
 }
 
 .services::before {
-  content: url(../images/services-left.jpg);
+  content: url(../images/Sanitasi3.jpg);
   top: 120px;
   left: 0;
   position: absolute;
@@ -1784,6 +1877,7 @@ Happy Steps Style
 #free-quote button:hover {
   opacity: 0.8;
 }
+
 /* 
 ---------------------------------------------
 Most Asked Style
@@ -1792,10 +1886,6 @@ Most Asked Style
 
 .most-asked {
   position: relative;
-}
-
-.most-asked p {
-  text-align: justify;
 }
 
 .most-asked::before {
@@ -2059,6 +2149,11 @@ body {
     margin-bottom: 0px;
   }
   .most-asked #free-quote {
+    margin-left: 0px;
+    margin-top: 45px;
+    padding: 30px;
+  }
+  .most-list #free-quote {
     margin-left: 0px;
     margin-top: 45px;
     padding: 30px;
