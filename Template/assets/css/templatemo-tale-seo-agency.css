@@ -167,7 +167,8 @@ ul {
 p {
   font-size: 15px;
   line-height: 30px;
-  color: #afafaf;
+  /* color: #afafaf; */
+  color: #2a2a2a;
 }
 
 img {
@@ -1486,7 +1487,7 @@ Happy Clients Style
 
 .happy-clients .section-heading {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .happy-clients .section-heading .line-dec {
@@ -1503,7 +1504,7 @@ Happy Clients Style
   background-color: #fff;
   padding: 25px 0px;
   border-radius: 23px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .happy-clients .naccs .menu div {
@@ -1551,7 +1552,7 @@ Happy Clients Style
 .happy-clients ul.nacc li h4 {
   font-size: 30px;
   color: #2a2a2a;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .happy-clients ul.nacc li .line-dec {
@@ -1666,6 +1667,123 @@ Happy Steps Style
   margin-top: 15px;
 }
 
+.most-list {
+  position: relative;
+}
+
+.most-list .sectionlist {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.most-list span {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.most-list p {
+  text-align: justify;
+}
+
+.most-list .section-heading {
+  margin-bottom: 5px;
+}
+
+.most-list .accordions .accordion {
+  border-bottom: 1px solid #eee;
+}
+
+.most-list .accordions .last-accordion {
+  border-bottom: none;
+}
+
+.most-list .accordion-head {
+  padding: 10px 0px !important;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2a2a2a;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .most-list .accordion-head {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.most-list .accordion-head .icon {
+  float: right;
+  transition: transform 200ms ease-in-out;
+}
+
+.most-list .accordion-head.is-open {
+  color: #5b03e4;
+  border-bottom: none;
+}
+
+.most-list .accordion-head.is-open .icon {
+  transform: rotate(45deg);
+}
+
+.most-list .accordion-body {
+  padding: 0px;
+  overflow: hidden;
+  height: 0;
+  transition: height 300ms ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+
+.most-list .accordion-body > .content p {
+  padding: 0px 0px 30px 0px;
+  padding-top: 0;
+}
+
+.most-list #free-quote {
+  border-radius: 23px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  margin-left: 45px;
+  background-color: #fff;
+}
+
+#free-quote .section-heading {
+  margin-bottom: 40px;
+}
+
+#free-quote input {
+  width: 100%;
+  height: 46px;
+  border-radius: 23px;
+  background-color: #f9ebff;
+  border: none;
+  outline: none;
+  padding: 0px 15px;
+  font-size: 14px;
+  color: #2a2a2a;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#free-quote input::placeholder {
+  color: #2a2a2a;
+}
+
+#free-quote button {
+  border: none;
+  height: 46px;
+  background-color: #5b03e4;
+  width: 100%;
+  border-radius: 23px;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+#free-quote button:hover {
+  opacity: 0.8;
+}
 /* 
 ---------------------------------------------
 Most Asked Style
@@ -1674,6 +1792,10 @@ Most Asked Style
 
 .most-asked {
   position: relative;
+}
+
+.most-asked p {
+  text-align: justify;
 }
 
 .most-asked::before {
